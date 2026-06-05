@@ -2,22 +2,23 @@
 # -*- coding: utf-8 -*-
 import pygame
 
-from code.Menu import Menu
+from code.const import WIN_WIDTH, WIN_HEIGHT
+from code.menu import Menu
 
 class Game:
     def __init__(self):
         pygame.init()
-        self.window = pygame.display.set_mode(size=(600, 480))
+        self.window = pygame.display.set_mode(size=(WIN_WIDTH, WIN_HEIGHT))
 
-    def run(self, ):
+    def run(self):
+        print('Setup Start')
+        print('Setup End')
+
+        print('Loop Start')
+        # Criamos o menu passando a nossa janela para ele
+        menu = Menu(self.window)
+
         while True:
-            menu = Menu(self.windows)
+            # Executa o código do menu (desenha o fundo na tela)
             menu.run()
-            pass
 
-
-            # Check for all events
-            # for event in pygame.event.get():
-              #  if event.type == pygame.QUIT:
-                  #  pygame.quit()  # Close Window
-                   # quit()  # end pygame
